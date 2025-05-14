@@ -31,8 +31,8 @@ services:
     environment:
       PG_HOST: db
       PG_PORT: 5432
-      PG_USER: postgres
-      PG_PASS: postgres
+      PG_USER: YOUR_POSTGRES_USERNAME
+      PG_PASS: YOUR_POSTGRES_PASSWORD
       PG_DB: lung_risk
       SECRET_KEY: "your-secret-key"
       GMAIL_USER: "your@gmail.com"

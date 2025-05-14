@@ -8,7 +8,7 @@ let userMessage = null;
 const inputInitHeight = chatInput.scrollHeight;
 
 // Gemini API configuration
-const GEMINI_API_KEY = "AIzaSyDbHM4kqNdoqorUdtYngC2Kd9OYx-lgOxA";
+const GEMINI_API_KEY = "YOUR_GEMINI_KEY";
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=GEMINI_API_KEY`;
 
 // Helper function to create chat messages
