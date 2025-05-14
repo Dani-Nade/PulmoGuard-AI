@@ -1,0 +1,12 @@
+# ignore Python virtual environments
+echo ".venv/" >> .gitignore
+
+# if you have other env names:
+echo "venv/" >> .gitignore
+
+# ignore compiled Python artifacts
+echo "__pycache__/" >> .gitignore
+echo "*.py[cod]" >> .gitignore
+
+# ignore any large DLLs you don’t need in source
+echo "*.dll" >> .gitignore
