@@ -1,0 +1,206 @@
+/* predictor-form.css (enhanced “sexy” version) */
+
+/* —— Form Container —— */
+.predictor-form {
+  position: relative;
+  z-index: 200;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #c2c2c2, #d0d0d0);
+  border-radius: 1rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  border-top: 6px solid #003366;
+  backdrop-filter: blur(4px);
+  margin-left: 600px;
+}
+
+/* —— Main Heading —— */
+.main-heading {
+  display: block;
+  color: #181818;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 80px;     /* added space above heading */
+  margin-bottom: 60px;
+  margin-left: 200px;
+  letter-spacing: 3px;
+  position: relative;
+  z-index: 200;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.main-heading::after {
+  content: '';
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* —— Instruction Text —— */
+.instructions {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  z-index: 200;
+  font-style: italic;
+}
+
+/* —— Sub-heading (h2) —— */
+.predictor-form h2 {
+  font-size: 2.6rem;
+  text-align: center;
+  color: #003366;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* —— Grid of Checkboxes —— */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.25rem;
+}
+
+/* —— “Sexy” Checkbox Cards —— */
+.form-check {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid rgba(0, 54, 102, 0.15);
+  border-left: 6px solid transparent;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-left 0.2s ease;
+  cursor: pointer;
+}
+.form-check:nth-child(odd) {
+  background: #fbfcfd;
+}
+.form-check:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  border-left-color: #2575fc;
+}
+
+/* —— Custom Checkbox Appearance —— */
+.form-check-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.75rem;
+  border: 2px solid #c3cfe2;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s ease;
+}
+.form-check-input:checked {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  border-color: #2575fc;
+  transform: scale(1.2);
+}
+.form-check-input:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px; left: 4px;
+  width: 6px; height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.form-check-label {
+  font-size: 1rem;
+  color: #222;
+  user-select: none;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* —— Predict Button —— */
+.form-actions {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 2rem;
+}
+.btn-predict {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  z-index: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn-predict:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* —— Result Card —— */
+.result-card {
+  display: none;
+  margin-top: 2.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #e3f2fd, #f5f9ff);
+  border: none;
+  box-shadow: 0 10px 32px rgba(0, 54, 102, 0.15);
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 200;
+  animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(2rem) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.result-card h4 {
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: #003366;
+  font-size: 1.8rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.result-card p {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0.75rem 0;
+  color: #111;
+}
+
+/* —— Risk Badges —— */
+.badge {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 2rem;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.bg-danger  { background-color: #ff4d4d; color: #000; box-shadow: 0 4px 12px rgba(255, 75, 75, 0.4); }
+.bg-warning { background-color: #f7bd03; color: #000; box-shadow: 0 4px 12px rgba(247, 189, 3, 0.4); }
+.bg-success { background-color: #4caf50; color: #fff; box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4); }
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+flask
+flask-login
+python-dotenv
+psycopg2-binary
+pandas
+numpy
+scikit-learn
+imbalanced-learn
+xgboost
+joblib
+matplotlib
+seaborn
+papermill
+nbconvert
+jupyter
+shap

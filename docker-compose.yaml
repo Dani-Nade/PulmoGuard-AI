@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: lung_risk
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - backend
+    healthcheck:
+      # use pg_isready to test readiness
+      test: ["CMD-SHELL", "pg_isready -U postgres -d lung_risk"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "5000:5000"
+    environment:
+      PG_HOST: db
+      PG_PORT: 5432
+      PG_USER: postgres
+      PG_PASS: postgres
+      PG_DB: lung_risk
+      SECRET_KEY: "your-secret-key"
+      GMAIL_USER: "your@gmail.com"
+      GMAIL_PASS: "your-gmail-password"
+      CONTACT_RECEIVER: "your@gmail.com"
+      FLASK_ENV: development
+    volumes:
+      - .:/app:delegated
+    networks:
+      - backend
+
+volumes:
+  db-data:
+
+networks:
+  backend:
+    driver: bridge

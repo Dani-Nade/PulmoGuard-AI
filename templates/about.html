@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- favicon -->
+  <link rel="icon" href="../static/images/icon.png" type="image/png">
+  <title>Our Mission – PulmoGuard AI</title>
+  <!-- Raleway Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../static/css/mission.css" />
+  <link rel="stylesheet" href="../static/css/userDashboard.css" />
+  <link rel="stylesheet" href="../static/css/chatbot.css" />
+
+  <!-- reuse the same card styles -->
+  <link rel="stylesheet" href="../../css/Admin Panel/getRating.css" />
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+  <!-- Main content wrapper -->
+  <main class="mission-wrapper">
+    <h1>Our Mission</h1>
+
+    <div id="mission-card-container">
+      <div class="mission-card">
+        <h2>PulmoGuard AI: Driving Early Detection & Better Outcomes</h2>
+
+        <p>At PulmoGuard AI, our mission is to empower patients and clinicians with  
+           cutting-edge, AI-driven lung-cancer risk assessments—delivering rapid,  
+           reliable insights that guide early intervention and save lives.</p>
+
+        <p>We combine large-scale data with expert validation to train models on  
+           tens of thousands of de-identified scans, ensuring every prediction is  
+           grounded in real-world clinical evidence.</p>
+
+        <p>Transparency and trust are core: we surface clear confidence scores,  
+           explainable feature maps, and actionable suggestions so care teams  
+           understand not just the “what” but the “why.”</p>
+
+        <p>Privacy and security guide everything we do. Patient data is encrypted  
+           end-to-end, stored under the highest compliance standards, and never  
+           shared without explicit consent.</p>
+
+        <p>We’re committed to continuous improvement: partnering with hospitals,  
+           research groups, and patient advocates to refine our models, expand  
+           access, and improve outcomes for everyone affected by lung disease.</p>
+
+        <p>Together, we’re reimagining lung health—making expert-level diagnostics  
+           accessible, personalized, and proactive, so every patient can breathe  
+           easier about their future.</p>
+      </div>
+    </div>
+  </main>
+  <nav class="sidebar close">
+    <header>
+      <div class="image-text">
+        <span class="image">
+          <img src="/static/images/icon.png" alt="logo"/>
+        </span>
+        <div class="text logo-text">
+          <span class="name">PulmoGuard</span>
+          <span class="profession">AI</span>
+        </div>
+      </div>
+      <i class="bx bx-chevron-right toggle"></i>
+    </header>
+    <div class="menu-bar">
+      <div class="menu">
+        <li class="search-box">
+          <i class="bx bx-search icon"></i>
+          <input type="text" placeholder="Search..." />
+        </li>
+        <ul class="menu-links">
+          <li class="nav-link"><a href="/dashboard">
+            <i class="bx bx-home-alt icon"></i>
+            <span class="text nav-text">Dashboard</span>
+          </a></li>
+          <li class="nav-link"><a href="/predictor">
+            <i class="bx bx-rocket icon"></i>
+            <span class="text nav-text">Predictor Tool</span>
+          </a></li>
+          <li class="nav-link"><a href="/scan-history">
+            <i class="bx bx-history icon"></i>
+            <span class="text nav-text">Scan History</span>
+          </a></li>
+          <li class="nav-link"><a href="/about">
+            <i class="bx bx-info-circle icon"></i>
+            <span class="text nav-text">Our Mission</span>
+          </a></li>
+          <li class="nav-link"><a href="/privacy">
+            <i class="bx bx-lock icon"></i>
+            <span class="text nav-text">Privacy & Terms of Use</span>
+          </a></li>
+          <li class="nav-link"><a href="/faq">
+            <i class="bx bx-question-mark icon"></i>
+            <span class="text nav-text">FAQ / Help Center</span>
+          </a></li>
+            <li class="nav-link"><a href="/contact">
+              <i class="bx bx-phone icon"></i>
+              <span class="text nav-text">Contact Us</span>
+            </a></li>
+          </a></li>
+          <li class="nav-link"><a href="/logout">
+            <i class="bx bx-log-out icon"></i>
+            <span class="text nav-text">Logout</span>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <section class="home"></section>
+  
+  
+  <!-- Chatbot Table -->
+  <class="show-chatbot">
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded">mode_comment</span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>PulmoGuard AI Chatbot</h2>
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined">smart_toy</span>
+          <p>Hi there!<br />How can I help you today?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+  
+
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="../static/js/userDashboard.js"></script>
+  <script src="../static/js/chatbot.js"></script>
+</body>
+</html>
